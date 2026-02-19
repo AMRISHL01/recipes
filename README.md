@@ -46,8 +46,18 @@ The application will start on port 8080 (default).
 
 ## API Endpoints
 
-(List key API endpoints here if applicable, or link to Swagger UI if enabled)
+### Recipes (`/api/recipes`)
+
+| Method | Endpoint | Description | Request Body | Params |
+| :--- | :--- | :--- | :--- | :--- |
+| `POST` | `/add` | Add a new recipe | JSON Recipe object | - |
+| `GET` | `/` | Get all recipes (paginated) | - | `page` (default 1), `limit` (default 5) |
+| `GET` | `/search` | Search recipes | - | `title`, `cuisine`, `totalTime`, `rating`, `page`, `limit` |
+
+### Hello (`/`)
+
+*   `GET /hello`: Returns a simple greeting to verify the application is running.
 
 ## License
 
-[License Name]
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
